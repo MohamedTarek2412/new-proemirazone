@@ -42,31 +42,48 @@ html {
     border-radius: 4px;
 }
 
-/* Enhanced Navbar Styles */
+
 .navbar {
     background: rgba(255, 255, 255, 0.98) !important;
     backdrop-filter: blur(20px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    padding: 1.2rem 0;
+    padding: 0.8rem 0; 
     border-bottom: 1px solid rgba(201, 169, 97, 0.1);
+    min-height: 70px; 
+    display: flex;
+    align-items: center;
 }
 
 .navbar.scrolled {
-    padding: 0.8rem 0;
+    padding: 0.6rem 0; 
     background: rgba(255, 255, 255, 0.98) !important;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    min-height: 60px;
 }
 
+
 .navbar-brand {
-    font-weight: 700;
-    font-size: 1.8rem;
-    color: var(--secondary-color) !important;
+    display: flex;
+    align-items: center;
+    height: 50px; 
+    padding: 0;
+}
+
+.navbar-brand .logo {
+    height: 140px;
+    width: auto;
     transition: all 0.3s ease;
 }
 
-.navbar-brand:hover {
+.navbar-brand:hover .logo {
     transform: translateY(-2px);
+}
+
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
 }
 
 .navbar-nav .nav-link {
@@ -78,6 +95,9 @@ html {
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .navbar-nav .nav-link::before {
@@ -117,7 +137,7 @@ html {
     border-radius: 15px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
     padding: 1rem 0;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 .navbar-nav .dropdown-item {
@@ -140,10 +160,10 @@ html {
     border-color: rgba(201, 169, 97, 0.2);
 }
 
-/* Enhanced Mobile Menu */
+
 .navbar-toggler {
     border: none;
-    padding: 0.5rem;
+    padding: 0.4rem 0.5rem;
     background: transparent;
     transition: all 0.3s ease;
 }
@@ -167,6 +187,11 @@ html {
 }
 
 @media (max-width: 991.98px) {
+    .navbar {
+        min-height: 65px;
+        padding: 0.6rem 0;
+    }
+    
     .navbar-collapse {
         position: absolute;
         top: 100%;
@@ -188,6 +213,10 @@ html {
         transform: translateY(0);
         opacity: 1;
         visibility: visible;
+    }
+
+    .navbar-brand .logo {
+        height: 140px; 
     }
 
     .navbar-nav .nav-link {
@@ -280,7 +309,6 @@ html {
     border-radius: 50px;
     transition: all 0.3s ease;
     margin-bottom: 15px;
-    background: var(--secondary-color);
 }
 
 .btn-outline-light:hover {
@@ -378,7 +406,7 @@ html {
 }
 
 .service-card h4 {
-    color: var(--);
+    color: white;
     font-weight: 600;
     margin-bottom: 1rem;
 }
@@ -485,9 +513,6 @@ html {
     .floating {
         display: none;
     }
-    .navbar-brand {
-        font-size: 1.5rem;
-    }
     .service-card {
         padding: 1.5rem;
     }
@@ -511,7 +536,6 @@ html {
     }
     .service-card {
         padding: 1rem;
-        margin-bottom: 2rm;
     }
     .testimonial-card {
         padding: 1.5rem;
@@ -586,4 +610,20 @@ html {
     .social-icons a {
         font-size: 1.5rem;
     }
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+section {
+  position: relative;
+  width: 100%;
+}
+
+.our-values, .our-clients {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
