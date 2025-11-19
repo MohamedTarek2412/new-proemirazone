@@ -781,6 +781,35 @@ section {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
+/* Ensure all images from images folder are responsive */
+img[src*="images/"] {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Enhanced responsive image styling for all local images */
+img[src*="images/"]:not(.logo) {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Mobile image adjustments */
+@media (max-width: 768px) {
+    img[src*="images/"]:not(.logo) {
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    img[src*="images/"]:not(.logo) {
+        border-radius: 10px;
+    }
+}
+
 /* Image Sizes */
 .img-small {
     max-width: 300px;
@@ -967,11 +996,20 @@ section {
         max-width: 100%;
         margin: 1rem auto;
     }
+    
+    img[src*="images/"]:not(.logo) {
+        height: auto !important;
+        max-height: 350px;
+    }
 }
 
 @media (max-width: 576px) {
     .img-banner {
         height: 200px;
+    }
+    
+    img[src*="images/"]:not(.logo) {
+        max-height: 250px;
     }
 }
 

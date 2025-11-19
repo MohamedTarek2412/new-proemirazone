@@ -72,7 +72,7 @@
                 <div class="col-lg-10">
                     <div class="about-card text-center" data-aos="fade-up">
                         <h2>Let's Build Your Business in the UAE</h2>
-                        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=800&auto=format&fit=crop" alt="Contact Us" class="img-banner responsive-img" style="margin-bottom: 2rem;">
+                        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=800&auto=format&fit=crop" alt="Contact Us" class="img-banner responsive-img" style="margin-bottom: 2rem; width: 100%; height: auto; object-fit: cover;">
                         <p class="lead">Proemirazone is your reliable partner for business formation, compliance, and corporate support. Our team is ready to guide you through every step of your UAE business journey.</p>
                         <p class="mb-0">Contact us today to schedule a consultation and learn how we can help you establish a strong, compliant presence in the UAE.</p>
                     </div>
@@ -340,7 +340,6 @@
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Simple form validation
             const firstName = document.getElementById('firstName').value;
             const lastName = document.getElementById('lastName').value;
             const email = document.getElementById('email').value;
@@ -348,7 +347,6 @@
             const message = document.getElementById('message').value;
             
             if (firstName && lastName && email && phone && message) {
-                // Show success message (in a real implementation, you would send this to a server)
                 alert('Thank you for your message! We will contact you shortly.');
                 document.getElementById('contactForm').reset();
             } else {
